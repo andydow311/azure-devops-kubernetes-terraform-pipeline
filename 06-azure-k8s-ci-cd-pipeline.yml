@@ -1,15 +1,11 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+resources:
+- repo: self
 
 variables:
   tag: 23 #'$(Build.BuildId)'
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
 stages:
 - stage: Build
